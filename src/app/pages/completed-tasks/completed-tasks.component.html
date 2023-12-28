@@ -1,0 +1,6 @@
+<div class="container-full py-12">
+    <h2 class="text-slate-500">Tasks</h2>
+    <div class="mt-4">
+        <app-task-list [taskList]="allTasks" (complete)="onComplete($event)" />
+    </div>
+</div>

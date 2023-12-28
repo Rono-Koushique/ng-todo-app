@@ -1,0 +1,33 @@
+<aside class="h-full w-64 bg-slate-100 border-r">
+    <div class="px-4">
+        <ul class="py-4 flex flex-col gap-1">
+            <li
+                [routerLink]="'/'"
+                class="side-navlink"
+                routerLinkActive="side-navlink--active"
+                [routerLinkActiveOptions]="{ exact: true }"
+            >
+                <p>All</p>
+                <p>{{ allTaskCount }}</p>
+            </li>
+            <li
+                [routerLink]="'/pending'"
+                class="side-navlink"
+                routerLinkActive="side-navlink--active"
+                [routerLinkActiveOptions]="{ exact: true }"
+            >
+                <p>Pending</p>
+                <p>{{ completedTaskCount }}</p>
+            </li>
+            <li
+                [routerLink]="'/completed'"
+                class="side-navlink"
+                routerLinkActive="side-navlink--active"
+                [routerLinkActiveOptions]="{ exact: true }"
+            >
+                <p>Completed</p>
+                <p>{{ pendingTaskCount }}</p>
+            </li>
+        </ul>
+    </div>
+</aside>

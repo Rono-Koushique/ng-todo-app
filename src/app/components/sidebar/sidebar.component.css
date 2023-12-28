@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+    .side-navlink {
+        @apply px-4 h-14 rounded-lg flex items-center justify-between text-base  text-slate-500 cursor-pointer hover:bg-slate-200 hover:text-slate-600;
+    }
+
+    .side-navlink--active {
+        @apply bg-slate-200 text-slate-600;
+    }
+}

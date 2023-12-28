@@ -1,0 +1,20 @@
+<div class="container-full py-4">
+    <input
+        type="text"
+        class="h-12 w-full px-5 rounded-lg bg-white border border-slate-300 focus:outline-none text-sm text-slate-700 placeholder:text-slate-400 focus:border-slate-400 focus:placeholder-slate-500"
+        placeholder="Create new task"
+        [(ngModel)]="newTask"
+        (keydown.Enter)="addTask()"
+    />
+</div>
+
+<div class="container-full py-12">
+    <h2 class="text-slate-500">Tasks</h2>
+    <div class="mt-4">
+        <app-task-list
+            [taskList]="allTasks"
+            (complete)="onComplete($event)"
+            (delete)="onDelete($event)"
+        />
+    </div>
+</div>

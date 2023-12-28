@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    table {
+        @apply w-full border-collapse;
+    }
+
+    table * {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    th,
+    td {
+        @apply px-4 first:pt-4 last:pb-4 sm:p-4;
+    }
+
+    th {
+        @apply text-left bg-slate-200 hidden sm:table-cell;
+    }
+
+    td {
+        @apply flex text-sm text-slate-700 sm:table-cell;
+    }
+
+    tr > td {
+        @apply text-center
+    }
+
+    tr > td:nth-child(1) {
+        @apply pl-0 text-left;
+    }
+
+    tr > td:last-child {
+        @apply pr-0 text-right;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        @apply capitalize font-semibold sm:content-none;
+    }
+}
+
+@layer components {
+    .container-base {
+        @apply w-full mx-auto max-w-md sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg px-4 md:px-8 xl:px-12;
+    }
+    .container-sm {
+        @apply w-full mx-auto max-w-md sm:max-w-screen-sm px-4;
+    }
+    .container-full {
+        @apply w-full mx-auto px-4 md:px-8;
+    }
+
+    .center {
+        @apply flex items-center justify-center;
+    }
+
+}
